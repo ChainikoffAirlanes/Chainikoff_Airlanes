@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chainikoff Airlines</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Chainikoff Airlines</h1>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="showSection('home')">Главная</a></li>
+                <li><a href="#" onclick="showSection('routes')">Расчёт маршрутов</a></li>
+                <li><a href="#" onclick="showSection('news')">Новости</a></li>
+                <li><a href="#" onclick="showSection('contacts')">Контакты</a></li>
+            </ul>
+        </nav>
+        <div class="language-selector">
+            <button onclick="changeLanguage('ru')">Рус</button>
+            <button onclick="changeLanguage('kk')">Қаз</button>
+            <button onclick="changeLanguage('en')">Eng</button>
+        </div>
+    </header>
+    
+    <main>
+        <section id="home" class="content-section active">
+            <div class="main-content">
+                <img src="A321_2.png">
+                <div class="text-container">
+                    <h2>Добро пожаловать в Chainikoff Airlines</h2>
+                    <p>Chainikoff Airlines — это новая эра в авиаперевозках! Мы гордимся своим современным флотом, состоящим из новейших Airbus A321,
+                         которые обеспечивают максимальный комфорт и безопасность для каждого пассажира. Наши самолёты оснащены передовыми технологиями,
+                          удобными креслами и просторными салонами, чтобы сделать ваше путешествие максимально приятным.
+
+                        Мы предлагаем гибкую маршрутную сеть, конкурентоспособные тарифы и высокий уровень сервиса, сравнимый с ведущими мировыми авиакомпаниями.
+                         Chainikoff Airlines — это пунктуальность, надёжность и забота о пассажирах. Мы работаем по стандартам мирового уровня, предоставляя только лучшее!
+                         Выбирайте Chainikoff Airlines — летайте с комфортом, безопасностью и уверенностью в завтрашнем дне! </p>
+                    <img src="A321_1.png" alt="Airbus A321">
+                </div>
+            </div>
+        </section>
+
+        <section id="routes" class="content-section">
+            <h2>Поиск маршрутов</h2>
+            <div class="route-search">
+                <input type="text" id="fromCity" placeholder="Город вылета">
+                <input type="text" id="toCity" placeholder="Город прилёта">
+                <button onclick="calculateFlightTime()">Рассчитать</button>
+            </div>
+            <p id="flightTime"></p>
+            <a href="https://www.aviasales.ru/" target="_blank" class="aviasales-button">Купить билеты</a>
+        </section>
+
+        <section id="news" class="content-section">
+            <h2>Новости</h2>
+            <article>
+                <h3>Мы начали работать.</h3>
+                <p>Chainikoff Airlines начала свою работу в сфере Авиации.</p>
+            </article>
+            <article>
+                <h3>Обновление флота</h3>
+                <p>Мы получили новые Airbus A321 с улучшенным комфортом.</p>
+            </article>
+            <article>
+                <h3>Скидки на билеты</h3>
+                <p>Специальные предложения на перелёты в Европу и Азию.</p>
+            </article>
+        </section>
+
+        <section id="contacts" class="content-section">
+            <h2>Контакты</h2>
+            <p>Email: chainikoff_airlanes@mail.ru</p>
+            <p>Телефон: Скоро будет</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Chainikoff Airlines. Все права защищены.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
